@@ -1,70 +1,221 @@
-# Getting Started with Create React App
+# DrugShield AI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**DrugShield AI** is an intelligent healthcare prototype designed to detect **dangerous drug interactions** between medicines. The system allows users to input multiple medicines and instantly analyzes potential interactions, displaying severity levels and medical advice.
 
-In the project directory, you can run:
+Medication errors and drug interactions are a major healthcare risk. DrugShield AI aims to help doctors, pharmacists, and patients quickly identify risky drug combinations and avoid harmful side effects.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Problem Statement
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Patients often take multiple medicines simultaneously, which can lead to harmful drug interactions.
 
-### `npm test`
+Key issues include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Doctors may not instantly remember all possible drug interactions
+* Dangerous combinations can cause severe side effects
+* Existing tools are slow, complex, or not easily accessible
 
-### `npm run build`
+### Impact
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Increased hospitalizations
+* Higher healthcare costs
+* Serious risk to patient safety
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Solution
 
-### `npm run eject`
+DrugShield AI provides a **fast and simple system** to check drug interactions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Users can enter multiple medicine names, and the system automatically analyzes all combinations to detect potential interactions and classify them as:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* 🟢 Safe
+* 🟡 Moderate Risk
+* 🔴 Dangerous
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The system also provides **effect descriptions and medical advice**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Multi-drug interaction detection
+* Dynamic medicine input fields (Add / Remove medicines)
+* Autocomplete suggestions for drug names
+* Risk classification (Safe / Moderate / Dangerous)
+* Clear result cards showing interaction details
+* Simple and user-friendly interface
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. User enters two or more medicine names.
+2. The system analyzes all pairwise drug combinations.
+3. The backend checks a drug interaction dataset.
+4. The system returns:
 
-### Analyzing the Bundle Size
+   * Interaction severity
+   * Possible effect
+   * Medical advice
+5. Results are displayed in an easy-to-read format.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## System Architecture
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Frontend → Sends medicine names
+Backend → Processes drug combinations
+Dataset → Checks known drug interactions
+Frontend → Displays severity and advice
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Tech Stack
 
-### Deployment
+### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* HTML
+* CSS
+* JavaScript
+* React
 
-### `npm run build` fails to minify
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Python
+* Flask
+
+### Libraries
+
+* Axios
+* React Hooks
+
+---
+
+## Project Structure
+
+```
+DrugShield_AI
+│
+├── Backend
+│   ├── app.py
+│   └── drug_interactions.csv
+│
+├── Frontend
+│   ├── public
+│   │   ├── index.html
+│   │   └── favicon.ico
+│   │
+│   └── src
+│       ├── App.js
+│       ├── App.css
+│       ├── drugs.js
+│       └── index.js
+│
+└── README.md
+```
+
+---
+
+## How to Run the Project
+
+### Start Backend
+
+Navigate to backend folder:
+
+```
+cd Backend
+```
+
+Install dependencies:
+
+```
+pip install flask flask-cors pandas
+```
+
+Run server:
+
+```
+python app.py
+```
+
+Backend will run at:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+### Start Frontend
+
+Navigate to frontend folder:
+
+```
+cd Frontend
+```
+
+Install dependencies:
+
+```
+npm install
+```
+
+Run React application:
+
+```
+npm start
+```
+
+Frontend will run at:
+
+```
+http://localhost:3000
+```
+
+---
+
+## Example Input
+
+User enters:
+
+```
+Aspirin
+Warfarin
+Ibuprofen
+```
+
+System output:
+
+```
+Aspirin + Warfarin → Dangerous
+Aspirin + Ibuprofen → Moderate
+Warfarin + Ibuprofen → Dangerous
+```
+
+---
+
+## Future Improvements
+
+* AI-based drug interaction prediction
+* Prescription image scanning using computer vision
+* Integration with hospital databases
+* Mobile application support
+* Voice-based medicine input
+
+---
+
+## Authors
+
+Developed as a hackathon prototype.
+
+Project: **DrugShield AI**
+
+---
+
+## License
+
+This project is created for educational and hackathon purposes.
