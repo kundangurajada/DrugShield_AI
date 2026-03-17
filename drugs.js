@@ -1,0 +1,32 @@
+const drugs = [
+"Aspirin",
+"Ibuprofen",
+"Paracetamol",
+"Warfarin",
+"Metformin",
+"Insulin",
+"Amoxicillin",
+"Clopidogrel",
+"Omeprazole",
+"Atorvastatin",
+"Simvastatin",
+"Ciprofloxacin",
+"Azithromycin",
+"Prednisone",
+"Losartan",
+"Lisinopril",
+"Diazepam",
+"Sertraline",
+"Tramadol",
+"Levothyroxine",
+"Furosemide",
+"Digoxin",
+"Theophylline",
+"Clarithromycin",
+"Calcium",
+"Vitamin K",
+"Alcohol",
+"Grapefruit"
+];
+
+export default drugs;

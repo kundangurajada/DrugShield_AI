@@ -1,0 +1,121 @@
+{
+ "aspirin-warfarin": {
+  "severity": "High",
+  "effect": "Increased bleeding risk",
+  "advice": "Avoid using together or monitor closely"
+ },
+
+ "aspirin-ibuprofen": {
+  "severity": "Moderate",
+  "effect": "Reduced aspirin effectiveness",
+  "advice": "Take at different times"
+ },
+
+ "metformin-alcohol": {
+  "severity": "High",
+  "effect": "Risk of lactic acidosis",
+  "advice": "Avoid alcohol consumption"
+ },
+
+ "amoxicillin-methotrexate": {
+  "severity": "High",
+  "effect": "Increased methotrexate toxicity",
+  "advice": "Monitor patient closely"
+ },
+
+ "lisinopril-potassium": {
+  "severity": "High",
+  "effect": "Dangerously high potassium levels",
+  "advice": "Avoid potassium supplements"
+ },
+
+ "simvastatin-grapefruit": {
+  "severity": "Moderate",
+  "effect": "Increased statin concentration",
+  "advice": "Avoid grapefruit juice"
+ },
+
+ "warfarin-vitamink": {
+  "severity": "Moderate",
+  "effect": "Reduced anticoagulant effect",
+  "advice": "Maintain consistent vitamin K intake"
+ },
+
+ "paracetamol-alcohol": {
+  "severity": "High",
+  "effect": "Severe liver damage risk",
+  "advice": "Avoid alcohol"
+ },
+
+ "clopidogrel-omeprazole": {
+  "severity": "Moderate",
+  "effect": "Reduced antiplatelet effectiveness",
+  "advice": "Use alternative proton pump inhibitor"
+ },
+
+ "digoxin-furosemide": {
+  "severity": "High",
+  "effect": "Electrolyte imbalance increasing digoxin toxicity",
+  "advice": "Monitor potassium levels"
+ },
+
+ "insulin-metformin": {
+  "severity": "Low",
+  "effect": "Improved glucose control",
+  "advice": "Monitor blood sugar levels"
+ },
+
+ "ibuprofen-prednisone": {
+  "severity": "High",
+  "effect": "Increased gastrointestinal bleeding risk",
+  "advice": "Use stomach protection medication"
+ },
+
+ "azithromycin-warfarin": {
+  "severity": "Moderate",
+  "effect": "Increased bleeding risk",
+  "advice": "Monitor INR levels"
+ },
+
+ "ciprofloxacin-theophylline": {
+  "severity": "High",
+  "effect": "Theophylline toxicity",
+  "advice": "Avoid combination or reduce dosage"
+ },
+
+ "diazepam-alcohol": {
+  "severity": "High",
+  "effect": "Severe respiratory depression",
+  "advice": "Avoid alcohol"
+ },
+
+ "atorvastatin-clarithromycin": {
+  "severity": "High",
+  "effect": "Muscle damage risk",
+  "advice": "Use alternative antibiotic"
+ },
+
+ "tramadol-sertraline": {
+  "severity": "High",
+  "effect": "Serotonin syndrome risk",
+  "advice": "Avoid combination"
+ },
+
+ "levothyroxine-calcium": {
+  "severity": "Moderate",
+  "effect": "Reduced thyroid hormone absorption",
+  "advice": "Take medicines 4 hours apart"
+ },
+
+ "losartan-ibuprofen": {
+  "severity": "Moderate",
+  "effect": "Reduced blood pressure control",
+  "advice": "Monitor kidney function"
+ },
+
+ "metformin-cimetidine": {
+  "severity": "Moderate",
+  "effect": "Increased metformin levels",
+  "advice": "Monitor kidney function"
+ }
+}
